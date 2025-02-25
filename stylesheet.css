@@ -1,0 +1,17 @@
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+}
+
+.nav-list li a {
+    display: block;
+}
+
+#main-doc {
+    margin-left: 20%;
+}
