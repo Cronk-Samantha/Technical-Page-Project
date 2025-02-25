@@ -1,3 +1,7 @@
+body {
+    background-color: #e5e9ec;
+}
+
 .nav-list {
     list-style-type: none;
     padding: 0;
@@ -6,12 +10,44 @@
     height: 100%;
     position: fixed;
     overflow: auto;
+    background-color: #e8871e;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    border-right: 3px solid black;
 }
 
-.nav-list li a {
+.nav-link a {
     display: block;
+    margin: 4%;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding: 5%;
+}
+
+.nav-title {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 5% 2%;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    color: #545775;
 }
 
 #main-doc {
-    margin-left: 20%;
+    margin-left: 23%;
 }
