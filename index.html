@@ -13,6 +13,8 @@
             <li class="nav-link"><a href="#introduction">Introduction</a></li>
             <li class="nav-link"><a href="#lets_talk_CSS">Let's Talk CSS</a></li>
             <li class="nav-link"><a href="#basic_syntax">Basic Syntax</a></li>
+            <li class="nav-link"><a href="#css_combinators">Combinators</a></li>
+            <li class="nav-link"><a href="#css_floats">CSS Float</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -60,6 +62,69 @@
                 The good news: that's all the syntax there is to CSS! The selector, followed by curly braces { }, then the declaration block. Of course,
                 there are a lot more things you need to know before your ready to style a whole webpage but, now that we got the syntax down lets get into types of selectors.  
             </p>
+        </section>
+        <section id="css_combinators" class="main-section">
+            <h2>Combinators</h2>
+            <p>When working with CSS, a <strong>combinator</strong> is what we use to describe the relationship between selectors. There are four combinators 
+            we can use between simple selectors. Read through the different types below: </p>
+
+            <ol>
+                <li>
+                    <strong>Descendant Combinator</strong>(adding a space between selectors): This combinator is used to select elements that are a descendant of a specified element. 
+                    <pre><code>
+                        div p {
+                            font-style: italic;
+                        }
+                    </code></pre>
+                    In this example, we are selecting all of the p elements found only within the div elements. You can also say you are only selecting the p elements that are contained within a div tag.
+                </li><br>
+                <li>
+                    <strong>Child Combinator</strong>(>): This combinator is used to select elements that are a direct descendant (or child) of a specified element. 
+                    <pre>
+                        <code>
+                            div > p {
+                                color: red;
+                            }
+                        </code>
+                    </pre>
+                    In the example above we are changing the font color to red for ONLY the p elements that are direct children of a div element. Something to note - 
+                    the descendant combinator will select & apply to all of the p elements within a div element, even if it is nested 5 times. The child combinator on the other hand will ONLY apply to the elements that are a direct descendant, so only the p elements indented (nested) once within the specified element.   
+                </li><br>
+                <li>
+                    <strong>Next Sibling Combinator</strong>(+): This combinator, indiciated with the addition symbol (+), selects an element that is directly after another element.
+                    <pre>
+                        <code>
+                            div + p {
+                                font-weight: bold;
+                            }
+                        </code>
+                    </pre>
+                    In this example we are selecting the first p element that immediately follows the div element. Only the first p element after the div is going to appear bold.
+                </li><br>
+                <li>
+                    <strong>Subsequent Sibling Combinator</strong>(~): This combinator selects all elements that are siblings of the specified element. 
+                    <pre>
+                        <code>
+                            p ~ div {
+                                color: blue;
+                            }
+                        </code>
+                    </pre>
+                    The above rule will apply to all the div elements that come after a p tag and are siblings. Siblings meaning they fall under the same parent element and they are both nested at the same level.
+                </li><br>
+            </ol>
+        </section>
+        <section id="css_float">
+            <h2>CSS Float</h2>
+            <p>Float is a property in CSS we can use to position and format content. One of the most common uses of the float property is when you want to wrap text around an image on page but, you can use it to position pretty much anything!
+                There are 4 values we can set to the float property: 
+            </p>
+            <ul>
+                <li><strong>left</strong>: setting an element with 'float: left' will position the element to the left of its container</li>
+                <li><strong>right</strong>: the element will position to the right of the container</li>
+                <li><strong>none</strong>: the default value of float; the element/item will appear as it's layed out in the HTML page.</li>
+                <li><strong>inherit</strong>: the element will be assigned the same float value as its parent element.</li>
+            </ul>
         </section>
     </main>
 </body>
