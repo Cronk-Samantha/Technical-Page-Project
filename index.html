@@ -12,6 +12,7 @@
             <li class="nav-title">CSS Documentation</li>
             <li class="nav-link"><a href="#introduction">Introduction</a></li>
             <li class="nav-link"><a href="#lets_talk_CSS">Let's Talk CSS</a></li>
+            <li class="nav-link"><a href="#basic_syntax">Basic Syntax</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -35,6 +36,30 @@
                 <li>CSS is <em>how</em> we style the stuff on the webpage (text size, background-color, text color, spacing, borders..)</li>
             </ol>
             <p>Eventually, you then add JavaScript to add animation and make the webpage more interactive but that's getting ahead of myself... </p>
+        </section>
+
+        <section id="basic_syntax" class="main-section">
+            <h2>Basic Syntax</h2>
+            <p>A CSS rule, in its most basic form, consists of a <em>selector</em> and a <em>declaration block</em>.</p>
+            <ul>
+                <li>The selector is exactly how it sounds, it is <strong>selecting</strong> which HTML elements we want to style/format.</li>
+                <li>The declaration block is where we <strong>declare</strong> what style/format properties we want applied to the selected elements.</li>
+            </ul>
+            <p>Let's take a look at this in action! Below, I have put a sample of CSS code. The text <strong>h1</strong> is our selector.
+            We are selecting all the h1 elements on our HTML page. The text within the opening and closing curly brackets, { }, is our 
+            declaration block.</p>
+            <pre>
+                <code>
+                    h1 { 
+                        font-weight: bold;
+                        background-color: green;
+                    }
+                </code>
+            </pre>
+            <p>So, the example above is going to apply to all h1 elements and they will appear in bold with a green background color. Not too bad, right? 
+                The good news: that's all the syntax there is to CSS! The selector, followed by curly braces { }, then the declaration block. Of course,
+                there are a lot more things you need to know before your ready to style a whole webpage but, now that we got the syntax down lets get into types of selectors.  
+            </p>
         </section>
     </main>
 </body>
